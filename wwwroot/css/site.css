@@ -516,24 +516,72 @@ ul li a {
   overflow: hidden;
   width: 100%;
   height: calc(100vh - 80px);
+  position: relative;
 }
 
-.Profile-Bg img {
+.Profile-Bg > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.Profile-Content {
+.Profile {
   position: absolute;
-  display: flex;
-  top: 30%;
-  right: 70%;
+  top: 10%;
+  left: 5%;
   color: #fff;
   z-index: 1;
 }
 
+.Profile h2 {
+  margin-bottom: 20px;
+  font-size: var(--font-h1);
+}
+
+.Profile-Content {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid white;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  transform: scale(1.05);
+  gap: 10px;
+}
+
+.Profile-Content img {
+  border-radius: 50%;
+}
+
+.Profile-Content .Profile-Detail{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.Profile-Detail{
+  gap: 10px;
+}
+
+.Profile-Content .Profile-Detail span{
+  font-weight: 600;
+  font-size: var(--font-h3);
+}
+
+.Profile-Button{
+  background-color:#99c8f1 ;
+  padding: 10px;
+  color: #000;
+  font-weight: 600;
+  text-align: center; 
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.Profile-Button:active{
+  background-color: #639ee6;
+  color: rgba(255, 255, 255, 0.74);
+}
 
   /* MOBILE */
 @media(max-width:768px){
