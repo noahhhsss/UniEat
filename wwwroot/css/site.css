@@ -52,7 +52,11 @@ ul li a {
   text-decoration: none;
   font-size: var(--font-h2);
   color: #162941;
-  padding: 5px;
+  padding: 15px; 
+}
+a:active {
+  color: white;
+
 }
 
 .show-menu {
@@ -504,6 +508,7 @@ ul li a {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: 10px;
 }
 
 .Place-Order-Btn:hover {
