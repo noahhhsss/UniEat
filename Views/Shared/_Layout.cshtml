@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniEat</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="img">
+            <img src="~/img/Unieatnavbar1.png" alt="" width="150">
+        </div>
+
+        <ul class="@ViewBag.MenuVisible">         
+             <li>
+                <a href="/Home/Menu">Menu</a>
+                <a href="">Contact Us</a>
+                <a href="">Orders</a>
+                <a href="/Home/Profile">Profile</a>
+                <a href="">Logout</a>      
+            </li>
+        </ul>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    </header>
+
+
+
+    <main class="@(ViewBag.ShowBg != false ? "Mainbg" : "")">
+            @if(ViewBag.showbg != false){
+
+            <img src="~/img/Unieatbg.jpg" class="bg-image" alt="">
+
+            <div class="copy-right">
+                <span>© Copyright 2026 UniEat | Sti College Rosario Student Portal</span>
+            </div>
+            }
+            
+        @RenderBody()
+        
+    </main>
+</body>
+</html>
