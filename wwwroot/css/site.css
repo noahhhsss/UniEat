@@ -603,7 +603,6 @@ ul li a {
     overflow-y: auto;
   }
   
-
   .Food-Container{
     grid-template-columns: repeat(1, 1fr); 
   }
