@@ -17,9 +17,20 @@
             <div class="Profile-Detail">
               <span>Name: <span class="UsersName">Noaqim Nasser J. Al Rawahi</span></span>
               <span>Student Id: <span class="Student-Id">2333332323123</span></span>
-              <button class="Profile-Button">Edit Profile</button>
+              <button class="Profile-Button" onclick="popup()">Edit Profile</button>
             </div>           
         </div>
     </div>
+    
+    <form class="Password-Pop-Up" id="PasswordPopup">
+        <span>Change Password</span>
+        <span class="Back" id="Close-Popup" onclick="closePopup()">x</span>
+        <input type="password" class="Error" placeholder="Old Password" required>
+        <input type="password" class="Error" placeholder="New Password" required>
+        <input type="password" class="Error" placeholder="Confirm Password" required>
+        <button type="submit">Save</button>
+    </form>
 </div>
+
+<script src="~/js/site.js"></script>
  

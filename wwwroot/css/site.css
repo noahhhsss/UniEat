@@ -33,6 +33,7 @@ header{
   align-items:center;
   justify-content:space-between;
   padding:0 30px;
+  font-weight: 600;
   height:80px; 
 }
 
@@ -516,7 +517,6 @@ a:active {
 }
 
   /* Profile */
-
 .Profile-Bg {
   overflow: hidden;
   width: 100%;
@@ -585,7 +585,62 @@ a:active {
 
 .Profile-Button:active{
   background-color: #639ee6;
-  color: rgba(255, 255, 255, 0.74);
+  color: rgba(255, 255, 25  5, 0.74);
+}
+
+.Password-Pop-Up {
+  display: none; 
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: #F0F0F0; 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  color: black;
+  z-index: 1000; 
+  min-width: 300px;
+}
+
+.Password-Pop-Up span {
+  display: flex;
+  justify-content: center;
+  margin-bottom:20px;
+  font-size: var(--font-h1);
+  font-weight: 600;
+}
+
+.Back{
+  cursor: pointer;
+}
+
+.Password-Pop-Up .Back{
+  position: absolute;
+  top: 1%;
+  right: 2%;
+}
+
+.Password-Pop-Up input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.Password-Pop-Up button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #99c8f1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Password-Pop-Up button:active {
+  background-color: #639ee6;
 }
 
   /* MOBILE */
@@ -658,5 +713,26 @@ a:active {
   
   .Food-Container{
     grid-template-columns: repeat(1, 1fr); 
+  }
+
+  .Profile-Content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .Profile-Content .Profile-Detail {
+    margin-top: 10px;
+  }
+
+  .Profile-Content img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .Profile h2 {
+    font-size: 1.5rem;
   }
 }
