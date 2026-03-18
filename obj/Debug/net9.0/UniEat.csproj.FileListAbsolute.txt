@@ -91,3 +91,4 @@ C:\Users\Lenovo\Desktop\Unieat\obj\Debug\net9.0\refint\UniEat.dll
 C:\Users\Lenovo\Desktop\Unieat\obj\Debug\net9.0\UniEat.pdb
 C:\Users\Lenovo\Desktop\Unieat\obj\Debug\net9.0\UniEat.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\Unieat\obj\Debug\net9.0\ref\UniEat.dll
+C:\Users\Lenovo\Desktop\Unieat\obj\Debug\net9.0\compressed\m5vpmmrlfv-i4ds3ez26w.gz
