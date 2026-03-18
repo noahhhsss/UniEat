@@ -19,6 +19,7 @@
   --font-h5: 1rem;
   --font-h6: 0.875rem;
   --font-button: 0.875em;
+  --responsive: clamp(1rem, 2.5vw, 4rem)
 }
 
 html, body{
@@ -607,7 +608,7 @@ a:active {
   display: flex;
   justify-content: center;
   margin-bottom:20px;
-  font-size: var(--font-h1);
+  font-size: var(--responsive);
   font-weight: 600;
 }
 
