@@ -19,13 +19,20 @@
   --font-h5: 1rem;
   --font-h6: 0.875rem;
   --font-button: 0.875em;
-  --responsive: clamp(1rem, 2.5vw, 4rem)
+  --responsive: clamp(1.5rem, 2vw, 4rem);
+  --responsive-btn: clamp(1rem, 1.5vw, 1.5rem);
+  --responsive-body: clamp(1rem, 1vw, 4rem);
 }
 
 html, body{
   height:100%;
   font-size:16px;
   font-family:"Poppins", sans-serif;
+}
+
+img{
+  width:100%;
+  height: auto;
 }
 
 header{
@@ -56,14 +63,15 @@ ul li a {
   color: #162941;
   padding: 15px; 
 }
+
 a:active {
   color: white;
 
 }
 
 .show-menu {
-    display: flex !important;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .menu-icon{
@@ -72,14 +80,10 @@ a:active {
   display:none;
 }
 
-.bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;    
-  height: 100%;     
-  object-fit: cover;
-  z-index: 0;
+.Img-Logo{
+  width: 200px;
+  height: 200px;
+  margin-top: 80px;
 }
 
 .copy-right{
@@ -89,6 +93,7 @@ a:active {
 
 .Mainbg {
   position: relative;
+  background-image: url("/img/Unieatbg.jpg");
   min-height: calc(100dvh - 80px);
   width: 100%;
   overflow: hidden;
@@ -518,6 +523,7 @@ a:active {
 }
 
   /* Profile */
+
 .Profile-Bg {
   overflow: hidden;
   width: 100%;
@@ -540,6 +546,10 @@ a:active {
   z-index: 1;
 }
 
+.Profile-Img{
+  width: 300px;
+}
+
 .Profile h2 {
   margin-bottom: 20px;
   font-size: var(--font-h1);
@@ -550,6 +560,7 @@ a:active {
   align-items: flex-start;
   border: 1px solid white;
   border-radius: 5px;
+  width: 130%;
   backdrop-filter: blur(10px);
   transform: scale(1.05);
   gap: 10px;
@@ -564,6 +575,7 @@ a:active {
   display: flex;
   flex-direction: column;
 }
+
 .Profile-Detail{
   gap: 10px;
 }
@@ -634,14 +646,82 @@ a:active {
   width: 100%;
   padding: 10px;
   border: none;
+  font-size: var(--responsive-btn);
   border-radius: 5px;
   background-color: #99c8f1;
   font-weight: bold;
+  color: #162941;
   cursor: pointer;
 }
 
 .Password-Pop-Up button:active {
   background-color: #639ee6;
+}
+
+ /* Order */
+
+.Order-txt{
+  margin: 20px;
+  font-size: var(--responsive-body);
+}
+
+.Order-Container{
+  background-color: #E3DCDC;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Order-Detail{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.Img-Unieat{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.Order-Info{
+  margin: 10px;
+}
+
+.Order-Info h1{
+  margin-bottom: 10px;
+}
+
+.Order-Info p{
+  margin-bottom: 10px;
+}
+
+.Reorder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.Reorder-Btn{
+  background-color:#639ee6 ;
+  border: none;
+  width:150px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.Reorder-Btn:active{
+  background-color: #162941;
 }
 
   /* MOBILE */
@@ -716,24 +796,63 @@ a:active {
     grid-template-columns: repeat(1, 1fr); 
   }
 
+    /* Profile */
+
   .Profile-Content {
     flex-direction: column;
     align-items: center;
     padding: 10px;
     margin: 20px;
+    display: flex;
+    width: auto;
     text-align: center;
+    gap: 20px;
   }
 
   .Profile-Content .Profile-Detail {
     margin-top: 10px;
   }
 
-  .Profile-Content img {
-    width: 90px;
+  .Profile-Img {
+    width: 120px;
     height: 90px;
   }
 
   .Profile h2 {
     font-size: 1.5rem;
   }
+
+    /* Order */
+
+  .Order-Container{
+    padding-bottom: 20px;
+  }
+
+  .Order-Detail{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 30px;
+  }
+
+  .Order-Info{
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .Img-Unieat{
+    width: 200px;
+    height: 200px;
+  }
+
+  .Reorder{
+    align-items: start;
+    margin: 10px;
+    gap: 5px;
+  }
+
+  .Reorder-Btn{
+    width: 100%;
+  }
+  
 }

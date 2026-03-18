@@ -11,6 +11,7 @@ const btnPickup = document.getElementById('btn-pickup');
         btnDelivery.classList.remove('active');
     });
 
+
 function popup() {
     document.querySelector('.Password-Pop-Up').style.display = "block";
 }
