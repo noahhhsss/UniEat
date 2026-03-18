@@ -33,6 +33,16 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult AdminMenu()
+    {
+        return View();
+    }
+
+    public IActionResult Adminstudent()
+    {
+        return View();
+    }
  
     
 

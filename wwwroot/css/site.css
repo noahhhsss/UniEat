@@ -20,7 +20,7 @@
   --font-h6: 0.875rem;
   --font-button: 0.875em;
   --responsive: clamp(1.5rem, 2vw, 4rem);
-  --responsive-btn: clamp(1rem, 1.5vw, 1.5rem);
+  --responsive-btn: clamp(1rem, 1.5vw, 1.12rem);
   --responsive-body: clamp(1rem, 1vw, 4rem);
 }
 
@@ -202,7 +202,7 @@ a:active {
   border: 1px solid #e0e0e0;
   gap: 10px;
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -241,7 +241,7 @@ a:active {
 
 .Food-Img-Container img{
   width: 100%;
-  height: 100%;
+  height: 110%;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -662,7 +662,10 @@ a:active {
 
 .Order-txt{
   margin: 20px;
-  font-size: var(--responsive-body);
+}
+
+.Order-txt h1{
+  font-size: var(--responsive);
 }
 
 .Order-Container{
@@ -723,6 +726,37 @@ a:active {
 .Reorder-Btn:active{
   background-color: #162941;
 }
+  /* Admin Food */
+
+.admin-food-txt{
+  margin: 10px;
+}
+
+.admin-food-container{
+  display: flex;
+  gap: 5px;
+  padding: 0;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.Soldout{
+  position: absolute;
+  background-color: red;
+  font-weight: 600;
+  border: none;
+  right: 1px;
+  color: white;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+}
+
+.Soldout:active{
+  background-color: white;
+  color: black;
+  border: 1px solid #000;
+}
 
   /* MOBILE */
 @media(max-width:768px){
@@ -747,6 +781,10 @@ a:active {
     width: 90%;         
     max-width: 400px;    
     padding: 24px 16px;
+  }
+
+  .Log-in span{
+    font-size: var(--responsive-body);
   }
 
   .Log-in input {
@@ -853,6 +891,12 @@ a:active {
 
   .Reorder-Btn{
     width: 100%;
+  }
+
+   /* Admin Menu */
+  .admin-food-container{
+    flex-direction: column;
+    
   }
   
 }
