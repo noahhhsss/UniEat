@@ -602,7 +602,7 @@ a:active {
 }
 
 .Password-Pop-Up {
-  display: none; 
+  display: None; 
   position: fixed; 
   top: 50%;
   left: 50%;
@@ -797,6 +797,10 @@ a:active {
   color: white;
 }
 
+.add:active{
+  background-color: #1e3a5f;
+}
+
 .delete{
   background-color: red;
   color: white;
@@ -836,14 +840,22 @@ a:active {
   justify-content: space-between;
 }
 
-.detail{
-  font-size: var(--font-h3);
+.students{
+display: flex;
+width: 100%;
+justify-content: space-between;
 }
 
-.data{
-  font-size: var(--font-h3);
-  margin: 0 0 0 32px;
-  flex: 1;
+.row .Weight{
+font-weight: 600;
+}
+
+.row .align{
+  margin: 0 0 0 5px;
+}
+
+.row span{
+  font-weight: 400;
 }
 
 .btns{
@@ -1024,6 +1036,7 @@ a:active {
     flex-direction: column;
   }
 
-  /* Admin Student */
+
+
 
 }

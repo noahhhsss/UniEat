@@ -1,8 +1,6 @@
-@{
-    ViewBag.showbg = false;
-}
 
 @{
+    ViewBag.showbg = false;
     ViewBag.MenuAdminVisible = "show-menu";
 }
 
@@ -16,7 +14,7 @@
         </div> 
 
         <div class="add-delete-btn">
-            <button class="add">+ Add</button>
+            <button class="add" id="Addstudent">+ Add</button>
             <button class="delete">Delete</button>
         </div> 
 
@@ -30,31 +28,36 @@
     </div>
 
     <div class="student-container">
+
+        <div class="students">
         
-        <div class="detail">
-            <P>Student Id:</P>
-            <P>Firs Name:</P>
-            <P>Middle Name:</P>
-            <P>Last Name:</P>
-            <P>Password:</P>
-            <P>Points:</P>
-        </div>
+            <div class="info">
+                <div class="row"><span class="Weight">Student Id:</span><span class="align">023123123</span></div>
+                <div class="row"><span class="Weight">First Name:</span><span class="align">NOA</span></div>
+                <div class="row"><span class="Weight">Middle Name:</span><span class="align">NASSER</span></div>
+                <div class="row"><span class="Weight">Last Name:</span><span class="align">ALRAWAHI</span></div>
+                <div class="row"><span class="Weight">Password:</span><span class="align">*********</span></div>
+                <div class="row"><span class="Weight">Points:</span><span class="align">69</span></div>
+            </div>
 
-        <div class="data">
-            <p>asd</p>
-            <p>asd</p>
-            <p>asd</p>
-            <p>asd</p>
-            <p>asd</p>
-            <p>asd</p>
-        </div>
-    
-        <div class="btns">
-            <input type="checkbox">
-            <button class="change">Change</button>
-            <button class="suspend">Suspend</button>
-        </div>
+            <div class="btns">
+                <input type="checkbox">
+                <button class="change">Change</button>
+                <button class="suspend">Suspend</button>
+            </div>
+        </div>  
     </div>
-    
 
+    <form class="Password-Pop-Up" id="PasswordPopup">
+        <span>Add Student</span>
+        <span class="Back" id="Close-Popup" >x</span>
+        <input type="password" class="Error" placeholder="First Name" required>
+        <input type="password" class="Error" placeholder="Middle Name" required>
+        <input type="password" class="Error" placeholder="Last Name" required>
+        <input type="password" class="Error" placeholder="Password" required>
+        <input type="password" class="Error" placeholder="Confirm Password" required>
+        <button type="submit" font-size="60px">Add</button>
+    </form>
+    
+    
 </div>

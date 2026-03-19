@@ -14,18 +14,20 @@ public class HomeController : Controller
     }
 
     public IActionResult Login()
-    {
+    {  
         return View();
+     
     }
 
     public IActionResult Menu()
     {
-     
+        ViewBag.Page = "Menu";
         return View();
     }
 
     public IActionResult Profile()
     {
+        ViewBag.Page = "Profile";
         return View();
     }
 
@@ -40,7 +42,8 @@ public class HomeController : Controller
     }
 
     public IActionResult Adminstudent()
-    {
+    {   
+        ViewBag.Page = "Adminstudent";
         return View();
     }
  
