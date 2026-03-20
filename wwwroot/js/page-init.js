@@ -63,6 +63,21 @@ const PageInit = {
           popup.style.display = 'None';
         });
 
+    },
+
+    Adminorder: function () {
+        console.log("Page inizalization");
+
+        const allCards = document.querySelectorAll('.total-card, .pending-order, .accepted-order, .cancel-order');
+
+        allCards.forEach(card => {
+            card.addEventListener('click', function () {
+                allCards.forEach(c => c.classList.remove('active')); 
+                this.classList.add('active');                  
+            });
+        });
+        
+
     }
 };
 

@@ -46,6 +46,12 @@ public class HomeController : Controller
         ViewBag.Page = "Adminstudent";
         return View();
     }
+
+    public IActionResult Adminorder()
+    {
+        ViewBag.Page = "Adminorder";
+        return View();
+    }
  
     
 

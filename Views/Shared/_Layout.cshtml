@@ -24,7 +24,7 @@
 
         <ul class="@(ViewBag.MenuAdminVisible)" id="Navlinks">        
             <li><a href="/Home/AdminMenu">Menu</a></li>
-            <li><a href="">Orders</a></li>
+            <li><a href="/Home/Adminorder">Orders</a></li>
             <li><a href="/Home/Adminstudent">Students</a></li>
             <li><a href="/Home/Menu">Logout</a></li>    
         </ul>
@@ -36,17 +36,19 @@
 
 
     <main class="@(ViewBag.ShowBg != false ? "Mainbg" : "")">
-            @if(ViewBag.showbg != false){
+        @if(ViewBag.showbg != false){
 
-            <div class="copy-right">
-                <span>© Copyright 2026 UniEat | Sti College Rosario Student Portal</span>
-            </div>
-            }
+        <div class="copy-right">
+            <span>© Copyright 2026 UniEat | Sti College Rosario Student Portal</span>
+        </div>
+        }
             
         @RenderBody()
         
     </main>
+
     <script src="~/js/site.js"></script>
     <script src="~/js/page-init.js"></script>
+    
 </body>
 </html>

@@ -894,6 +894,155 @@ font-weight: 600;
   background-color: red;
   color: white;
 }
+  /* Adminorder */
+
+.order-card{
+  margin: 15px;
+  display: flex;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.total-card, 
+.pending-order, 
+.accepted-order, 
+.cancel-order {
+  display: flex;     
+  border-radius: 5px;     
+  flex-direction: column; 
+  align-items: center;   
+  margin: 10px;
+  padding: 15px;
+}
+
+.total-card{
+  background-color: #FCFBFB;
+  box-shadow: -4px 0 0 0 #09A152;
+}
+
+.total-card:hover{
+  background-color: #09A152;
+}
+
+.total-card.active{
+  background-color: #09A152;
+}
+
+.pending-order{
+  background-color: #FCF8F2;
+  box-shadow: -4px 0 0 0 #F6A224;
+}
+
+.pending-order:hover{
+  background-color: #F6A224;
+}
+
+.pending-order.active{
+  background-color: #F6A224;
+}
+
+.accepted-order{
+  background-color: #F6F9F8;
+  box-shadow: -4px 0 0 0 #09A152;
+}
+
+
+.accepted-order:hover{
+  background-color: #09A152;
+}
+
+.accepted-order.active{
+  background-color: #09A152;
+}
+
+
+.cancel-order{
+  background-color: #FCF2F1;
+  box-shadow: -4px 0 0 0 #E4483A;
+}
+
+.cancel-order:hover{
+  background-color: #E4483A;
+}
+
+.cancel-order.active{
+  background-color: #E4483A;
+}
+
+
+.card-img{
+  width: 100px;
+  height: auto;
+}
+
+
+.order-table {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.orders-table_head {
+  background: #f0f4f8;
+}
+
+.orders-table_header-row {
+  border-bottom: 0.5px solid #e5e7eb;
+}
+
+.orders-table_th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.orders-table_body {
+  width: 100%;
+}
+
+.orders-table_row {
+  border-bottom: 0.5px solid #e5e7eb;
+}
+
+.orders-table_row:hover {
+  background: #f9fafb;
+}
+
+.orders-table_td {
+  padding: 11px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+.btn-view {
+  background: #b8d0f0;
+  color: #185FA5;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #85B7EB;
+  color: #0C447C;
+}
+
+
 
 
   /* MOBILE */

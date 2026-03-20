@@ -1,0 +1,95 @@
+@{
+    ViewBag.showbg = false;
+    ViewBag.MenuAdminVisible = "show-menu";
+}
+
+<div class="order-card">
+
+    <div class="card-container">
+
+        <div class="total-card">
+
+            <div class="card-img">
+                <img src="~/img/totalorder.png" alt="">
+            </div>
+
+            <h3>Total Order</h3>
+
+            <span>120</span>
+
+        </div>
+
+        <div class="pending-order">
+
+            <div class="card-img">
+                <img src="~/img/Pendingorders.png" alt="">
+            </div>
+
+            
+            <h3>Pending Order</h3>
+
+            <span>120</span>
+
+        </div>
+
+        <div class="accepted-order">
+
+            <div class="card-img">
+                <img src="~/img/Acceptedorder.png" alt="">
+            </div>
+
+            
+            <h3>Accepted Order</h3>
+
+            <span>120</span>
+
+        </div>
+
+        <div class="cancel-order">
+
+            <div class="card-img">
+                <img src="~/img/Cancelorder.png" alt="">
+            </div>
+
+            
+            <h3>Cancel Order</h3>
+
+            <span>2</span>
+        </div>
+
+    </div>
+
+    <div class="order-table">
+
+        <table class="orders-table">
+            <thead class="orders-table_head">
+                <tr class="orders-table_header-row">
+                    <th class="orders-table_th">Order ID</th>
+                    <th class="orders-table_th">Student Name</th>
+                    <th class="orders-table_th">Room</th>
+                    <th class="orders-table_th">Payment</th>
+                    <th class="orders-table_th">Total</th>
+                    <th class="orders-table_th">Delivery Type</th>
+                    <th class="orders-table_th">Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="orders-table_body">
+                <tr class="orders-table_row">
+                    <td class="orders-table_td">157123212</td>
+                    <td class="orders-table_td">Mark Reyes</td>
+                    <td class="orders-table_td">211</td>
+                    <td class="orders-table_td">Gcash</td>
+                    <td class="orders-table_td">108</td>
+                    <td class="orders-table_td">Pickup</td>
+                    <td class="orders-table_td">
+                    <button class="btn-view" id="View">VIEW</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</div>
