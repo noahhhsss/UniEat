@@ -4,6 +4,10 @@ const PageInit = {
 
         const btnDelivery = document.getElementById('btn-delivery');
         const btnPickup = document.getElementById('btn-pickup');
+        const minus = document.getElementById('minus');
+        const add = document.getElementById('add');
+        const num = document.getElementById('num');
+        let count = parseInt(num.textContent);
 
         btnDelivery.addEventListener('click', () => {
             btnDelivery.classList.add('active');
@@ -14,6 +18,23 @@ const PageInit = {
             btnPickup.classList.add('active');
             btnDelivery.classList.remove('active');
         });
+
+        add.addEventListener('click' , function () {
+           count++;
+           num.textContent = count;
+        })
+
+        minus.addEventListener('click' , function() {
+            if(count > 1){
+                count--;
+                num.textContent = count;
+            }else{
+                cartitem.style.display = 'none';
+            }
+            
+        });
+
+
     },
 
     Orders: function () {
@@ -76,9 +97,8 @@ const PageInit = {
                 this.classList.add('active');                  
             });
         });
-        
+    },
 
-    }
 };
 
 document.addEventListener("DOMContentLoaded", function () {

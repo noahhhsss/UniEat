@@ -22,13 +22,21 @@
   --responsive: clamp(1.5rem, 2vw, 4rem);
   --responsive-btn: clamp(1rem, 1.5vw, 1.12rem);
   --responsive-body: clamp(1rem, 1vw, 4rem);
+  --nigger: hsla(0, 0%, 0%, .5);;
 }
 
-html, body{
+html{
   height:100%;
   font-size:16px;
   font-family:"Poppins", sans-serif;
 }
+
+body{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 
 img{
   width:100%;
@@ -659,6 +667,9 @@ a:active {
 }
 
  /* Order */
+ .orders{
+  min-height: 88.3vh;
+ }
 
 .Order-txt{
   margin: 20px;
@@ -897,7 +908,7 @@ font-weight: 600;
   /* Adminorder */
 
 .order-card{
-  margin: 15px;
+  margin: 10px;
   display: flex;
 }
 
@@ -905,6 +916,11 @@ font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.card-container span{
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .total-card, 
@@ -916,7 +932,7 @@ font-weight: 600;
   flex-direction: column; 
   align-items: center;   
   margin: 10px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .total-card{
@@ -975,7 +991,7 @@ font-weight: 600;
 
 
 .card-img{
-  width: 100px;
+  width: 70px;
   height: auto;
 }
 
@@ -1042,8 +1058,103 @@ font-weight: 600;
   color: #0C447C;
 }
 
+/* Admin Order pop Up*/
+.modal{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--nigger);
+}
 
+.view-order-container{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  align-self: center;
+  width: 25%;
+  background-color: white;
+  transform: translateY(-50%);
+}
 
+.view-txt{
+  display: flex;
+  padding: 10px;
+  background-color: #e7e5e9;
+  justify-content: space-between;
+}
+
+.view-txt .Back{
+  cursor: pointer;
+}
+
+.std-order-data{
+  margin-top: 5px;
+  flex-direction: column;
+  display: flex;
+  font-size: 20px;
+  gap: 5px;
+  padding: 10px;
+}
+
+.std-order-data .user-data{
+  font-weight: 600;
+}
+
+.item-list{
+  display: block;
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.item-ordered{
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0 10px;
+}
+
+.item-ordered h3{
+  font-size: 15px;
+}
+
+.item-btn{
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+
+.item-btn .Accepted{
+  background-color: #137225;
+}
+
+.item-btn .Declined{
+  background-color: red;
+}
+
+.order-status{
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+}
+
+.order-status .process{
+  color: #F6A224;
+  font-weight: 600;
+}
+
+.item-btn button{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+}
 
   /* MOBILE */
 @media(max-width:768px){
@@ -1184,5 +1295,32 @@ font-weight: 600;
   .admin-food-container{
     flex-direction: column;
   }
+
+  /* Admin Order */
+  .order-card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-container h3{
+    margin-left:15px ;
+  }
+
+
+  .total-card, 
+  .pending-order, 
+  .accepted-order, 
+  .cancel-order {
+  display: flex;         
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+}
 
 }
