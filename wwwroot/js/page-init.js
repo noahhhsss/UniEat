@@ -63,6 +63,7 @@ const PageInit = {
 
     Login: function () {
         console.log("Login initialized");
+    
     },
 
     Adminstudent: function () {
