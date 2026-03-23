@@ -69,22 +69,6 @@ const PageInit = {
     Adminstudent: function () {
         console.log("Admin Student initialized");
 
-        const add = document.getElementById('Addstudent');
-        const popup = document.getElementById('PasswordPopup');
-        const closeBtn = document.getElementById('Close-Popup');
-
-        add?.addEventListener('click', function () {
-            popup.style.display = 'Block';
-        });
-
-        document.querySelector('.Addstudent')?.addEventListener('click', function () {
-            popup.style.display = 'block';
-        });
-
-        closeBtn?.addEventListener('click', function () {
-          popup.style.display = 'None';
-        });
-
     },
 
     Adminorder: function () {

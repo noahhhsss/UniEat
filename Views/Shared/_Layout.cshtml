@@ -16,17 +16,17 @@
 
         <ul class="@(ViewBag.MenuVisible)" id="Navlinks">        
             <li><a href="/Home/Menu">Menu</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="/Home/AdminMenu">Contact Us</a></li>
             <li><a href="/Home/Orders">Orders</a></li>
             <li><a href="/Home/Profile">Profile</a></li>
-            <li><a href="">Logout</a></li>    
+            <li><a href="/Home/Login">Logout</a></li>    
         </ul>
 
         <ul class="@(ViewBag.MenuAdminVisible)" id="Navlinks">        
             <li><a href="/Home/AdminMenu">Menu</a></li>
             <li><a href="/Home/Adminorder">Orders</a></li>
             <li><a href="/Home/Adminstudent">Students</a></li>
-            <li><a href="/Home/Menu">Logout</a></li>    
+            <li><a href="/Home/Login">Logout</a></li>    
         </ul>
 
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -47,23 +47,25 @@
         
     </main>
 
-    <div class="modal" id="modal"">
+    <div class="modal" id="modal">
+
+        <!-- Pop Up Student Order -->
         <div class="view-order-container" id="vieworder">
 
             <div class="view-txt">
-                <h2>View Order</h2>
+                <h2 id="viewtxt">View Order</h2>
                 <h2 class="Back" id="Back">X</h2>
             </div>
 
             <div class="std-order-data">
                 <span class="coloumn">Order id:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Student Name:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Room:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Payment:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Points:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Total:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Created at:<span class="user-data">1231231231</span></span>
-                <span class="coloumn">Delivery Type:<span class="user-data">1231231231</span></span>
+                <span class="coloumn">Student Name:<span class="user-data">Maica Abeledow</span></span>
+                <span class="coloumn">Room:<span class="user-data">212</span></span>
+                <span class="coloumn">Payment:<span class="user-data">Gcash</span></span>
+                <span class="coloumn">Points:<span class="user-data">0</span></span>
+                <span class="coloumn">Total:<span class="user-data">1billion</span></span>
+                <span class="coloumn">Created at:<span class="user-data">03/23/2025</span></span>
+                <span class="coloumn">Delivery Type:<span class="user-data">Pick up</span></span>
                 <div class="line"></div>
                 
             </div>
@@ -82,8 +84,8 @@
             </div>
 
             <div class="item-btn">
-                <button class="Accepted">Accepted</button>
-                <button class="Declined">Declined</button>
+                <button class="Accepted" id="Accepted" >Accepted</button>
+                <button class="Declined" id="Declined">Declined</button>
             </div>
 
             <div class="order-status">
@@ -92,6 +94,37 @@
             </div>            
         
         </div>
+
+
+        <!-- Pop Up Add Student -->
+        <form class="std" id="std" method="POST">
+
+            <div class="view-txt">
+                <span id="changed">Add Student</span>
+                <span class="Back" id="Backstd">x</span>
+            </div>
+
+            <input type="text"  class="txt" placeholder="First Name" required>
+            <input type="text"  class="txt" placeholder="Middle Name">
+            <input type="text"  class="txt" placeholder="Last Name" required>
+            <input type="password" class="txt" placeholder="Password" required>
+            <input type="password" id="confirmpass" class="txt" placeholder="Confirm Password" required>
+            <button type="submit" class="add-btn" id="changes" font-size="60px">Add</button>
+        </form>
+
+        <div class="deleter" id="delete">
+            <div class="delete-txt">
+                <h2>Are you sure?</h2>
+            </div>  
+
+            <div class="delete-no-btn">
+                <button class="no" id="No-btn">No</button>
+                <button class="del">Yes</button>
+            </div>
+        </div>
+
+
+
     </div>  
 
     <script src="~/js/site.js"></script>
