@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
 *,
 *::before,
@@ -12,6 +13,7 @@
   --margin:1.25;
   --font-body: 1rem;
   --font-small: 0.75rem;
+  --big-font: 3rem;
   --font-h1: 2rem;
   --font-h2: 1.5rem;
   --font-h3: 1.25rem;
@@ -737,6 +739,81 @@ a:active {
 .Reorder-Btn:active{
   background-color: #162941;
 }
+  /* Contact us*/
+
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #9ec7eac0; 
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 50px 120px 50px; 
+  position: relative;
+}
+
+.contact-txt {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+}
+
+.contact-txt h4 {
+  margin-top: 25px;
+  font-size: var(--font-h3);
+}
+
+.contact-txt h1 {
+  font-size: var(--big-font);
+}
+
+.contact-info {
+  position: absolute;
+  bottom: -180px;        
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25%;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info svg {
+  width: 15%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #33475b;
+  margin-bottom: 18px;
+  letter-spacing: 0.01em;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #6b7c93;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.phone-number {
+  font-size: 15px;
+  font-weight: 700;
+  color: #00a4bd;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 18px;
+  transition: color 0.2s;
+}
+
+.phone-number:hover {
+  color: #0080a0;
+}
+ 
   /* Admin Food */
 
 .admin-food-txt{

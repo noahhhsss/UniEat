@@ -49,6 +49,7 @@
             addstd.addEventListener('click', function () {
                 modal.style.display = 'flex';
                 std.style.display = 'flex';
+                deleter.style.display = 'none';
                 vieworder.style.display = 'none';
                 confirmpass.style.display = 'flex';
                 document.getElementById('changed').innerText = 'Add';

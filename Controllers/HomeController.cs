@@ -19,6 +19,23 @@ public class HomeController : Controller
      
     }
 
+    [HttpPost]
+    public IActionResult Login(string username)
+    {
+        // Save session
+        HttpContext.Session.SetString("Username", username);
+
+        // Redirect based on input
+        if (username.ToLower() == "admin")
+        {
+            return RedirectToAction("AdminMenu");
+        }
+        else
+        {
+            return RedirectToAction("Menu");
+        }
+    }
+
     public IActionResult Menu()
     {
         ViewBag.Page = "Menu";
@@ -28,6 +45,11 @@ public class HomeController : Controller
     public IActionResult Profile()
     {
         ViewBag.Page = "Profile";
+        return View();
+    }
+
+    public IActionResult Contact()
+    {
         return View();
     }
 
@@ -52,6 +74,7 @@ public class HomeController : Controller
         ViewBag.Page = "Adminorder";
         return View();
     }
+
  
     
 
